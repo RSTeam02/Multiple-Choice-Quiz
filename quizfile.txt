@@ -1,2 +1,2 @@
 99 is equal to:,3*30+3²,2*33,11*9,+,-,+
-Which color component(s) contain(s) in RGB color space?,red,green,gray,blue,+,+,-,+
+Which color component(s) contain(s) the RGB color space?,red,green,gray,blue,+,+,-,+
