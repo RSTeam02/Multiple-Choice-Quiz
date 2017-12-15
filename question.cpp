@@ -1,9 +1,10 @@
 #include "question.h"
 
 
-void Question::setQuestion(vector<string>& q){
+void Question::setQas(vector<string>& q){
     qas = q;
 }
+
 
 //first column is always the question (qas[0])
 string Question::getQuestion(){

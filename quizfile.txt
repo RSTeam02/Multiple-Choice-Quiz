@@ -1,2 +1,4 @@
 99 is equal to:,3*30+3²,2*33,11*9,+,-,+
 Which color component(s) contain(s) the RGB color space?,red,green,gray,blue,+,+,-,+
+What is the meaning of "++" or "--"?,it is also known as increment or decrement operator,it adds/subtracts a variable by 2,it's equal to x=x+2 or x=x-2,it adds/subtracts a variable by 1,it's equal to x=x+1 or x=x-1,+,-,-,+,+
+What does the "%" operator in a programming language?,it is supposed to use for percentage calculation,it calculates the remainder of a division,it is also known as the "modulo" operator,1%100=1/100,1%100=100,-,+,+,-,+

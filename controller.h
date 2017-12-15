@@ -20,15 +20,18 @@ using namespace std;
 class Controller{
 protected:
     fstream tFile;
-    int index;
+    int index;   
+    vector<string>lines;
     vector<Question> question;
     vector<vector<string>>text2Arr;
 public:
     Controller();
     void start();
     void setIndex(int idx);
+    vector<int>::size_type getNumOfLines();
     string nextQuestion();
     vector<string> nextAnswer();
     vector<string> nextSolution();
+  
 };
 #endif

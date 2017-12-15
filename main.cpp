@@ -14,25 +14,28 @@ int main(){
     char end = 'Z';
     Controller ctrl;
     ctrl.start();
-    //choose question
-    ctrl.setIndex(1);
-    //show question with answers, solutions
-    cout<<ctrl.nextQuestion()<<"\n";
-    begin = 'A';
-    for(int i = 0; i < ctrl.nextAnswer().size(); i++){    
-        cout<<begin<<": "<<ctrl.nextAnswer()[i]<<"\n";
-        begin++;
-    }
-
-    begin = 'A'; 
-    cout<<"\nSolution:\n";
-    for(int i = 0; i < ctrl.nextSolution().size(); i++){
-        //"+" is right, "-" is wrong answer, see quizFile        
-        if("+" == ctrl.nextSolution()[i]){
-            cout<<begin<<"\n";
+    //all questions
+    for(vector<int>::size_type h = 0; h < ctrl.getNumOfLines(); h++){
+        ctrl.setIndex(h);
+        //show question with answers, solutions
+        cout<<ctrl.nextQuestion()<<"\n";
+        begin = 'A';
+        for(int i = 0; i < ctrl.nextAnswer().size(); i++){    
+            cout<<begin<<": "<<ctrl.nextAnswer()[i]<<"\n";
+            begin++;
         }
-        begin++;
-    } 
+
+        begin = 'A'; 
+        cout<<"\nSolution:\n";
+        for(int i = 0; i < ctrl.nextSolution().size(); i++){
+            //"+" is right, "-" is wrong answer, see quizFile        
+            if("+" == ctrl.nextSolution()[i]){
+                cout<<begin<<"\n";
+            }
+            begin++;
+        }
+        cout<<"\n";
+    }
    
     return 0;
 

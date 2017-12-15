@@ -22,11 +22,11 @@ protected:
     vector<string>qas;
     string question;
 public:    
-    void setQuestion(vector<string>& q);
+    void setQas(vector<string>& q); 
     void answerSize();
     string getQuestion();
     void randomPos();
-    vector<string>getAnswer();
+    vector<string>getAnswer();    
     vector<string>getSolution();
 };
 #endif

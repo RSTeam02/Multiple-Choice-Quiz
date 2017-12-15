@@ -13,44 +13,44 @@ usage with g++ compiler:
 ```
 $ g++ main.cpp controller.cpp player.cpp filereader.cpp question.cpp -std=c++11 -o main
 $ ./main
-Which color component(s) contain(s) the RGB color space?
-A: red
-B: gray
-C: green
-D: blue
+99 is equal to:
+A: 11*9
+B: 3*30+3²
+C: 2*33
 
 Solution:
 A
-C
-D
-$ ./main
+B
+
 Which color component(s) contain(s) the RGB color space?
-A: gray
+A: green
 B: blue
 C: red
-D: green
-
-Solution:
-B
-C
-D
-$ ./main
-Which color component(s) contain(s) the RGB color space?
-A: red
-B: green
-C: blue
 D: gray
 
 Solution:
 A
 B
 C
-$ ./main
-Which color component(s) contain(s) the RGB color space?
-A: blue
-B: gray
-C: green
-D: red
+
+What is the meaning of "++" or "--"?
+A: it adds/subtracts a variable by 2
+B: it adds/subtracts a variable by 1
+C: it's equal to x=x+2 or x=x-2
+D: it's equal to x=x+1 or x=x-1
+E: it is also known as increment or decrement operator
+
+Solution:
+B
+D
+E
+
+What does the "%" operator in a programming language?
+A: it calculates the remainder of a division
+B: 1%100=1/100
+C: it is also known as the "modulo" operator
+D: 1%100=100
+E: it is supposed to use for percentage calculation
 
 Solution:
 A

@@ -3,18 +3,24 @@
 Controller::Controller(){
     Filereader fr;
     Player p1;
-    fstream textFile;
+    fstream textFile;    
     textFile.open("quizfile.txt", ios::in);
-    text2Arr = fr.lineTovect2d(fr.fileToline(textFile));     
+    lines = fr.fileToline(textFile);
+    text2Arr = fr.lineTovect2d(lines);     
     question.resize(text2Arr.size());
  
 }
 
+
 void Controller::start(){    
     for(int i = 0; i < text2Arr.size(); i++){
-        question[i].setQuestion(text2Arr[i]); 
+        question[i].setQas(text2Arr[i]); 
     }    
 }
+
+vector<int>::size_type Controller::getNumOfLines(){
+    return lines.size();
+} 
 
 void Controller::setIndex(int idx){
     index = idx;
