@@ -13,7 +13,7 @@ Progress:
 + non-checked: 0pts 
 + no negative points if wrong checked answer(s) < right checked answer(s)
 
-
+13.12. convert file to questions:
 + main.cpp: start and test program from int main()
 + filereader class: read lines of quiz textfile and convert into 2d vector string
 + question class: seperate question, answer and solution possibilities => randomize positions 
