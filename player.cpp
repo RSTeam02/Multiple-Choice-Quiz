@@ -4,11 +4,11 @@ void Player::setName(string name){
     playerName = name;
 }
 
-void Player::setScore(int score){
-    playerScore = score;
+void Player::setScore(double score){
+    playerScore += score;
 }
 
-int Player::getScore(){
+double Player::getScore(){
     return playerScore;
 }
 

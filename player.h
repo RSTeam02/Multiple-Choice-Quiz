@@ -13,11 +13,11 @@ using namespace std;
 class Player{
 protected:
     string playerName;
-    int playerScore;
+    double playerScore;
 public:    
     void setName(string name);
-    void setScore(int score);
+    void setScore(double score);
     string getName();
-    int getScore();
+    double getScore();
 };
 #endif

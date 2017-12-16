@@ -21,6 +21,7 @@ class Controller{
 protected:
     fstream tFile;
     int index;   
+    Player p1;
     vector<string>lines;
     vector<Question> question;
     vector<vector<string>>text2Arr;
@@ -28,8 +29,10 @@ public:
     Controller();
     void start();
     void setIndex(int idx);
-    vector<int>::size_type getNumOfLines();
+    void showAll();   
     string nextQuestion();
+    void gameStart();
+    void checkAnswer(string input, string solution);
     vector<string> nextAnswer();
     vector<string> nextSolution();
   

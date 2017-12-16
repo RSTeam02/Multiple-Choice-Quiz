@@ -2,60 +2,92 @@
 
 Progress:
 
+
+16.12. answer checking:
++ multiple choice user input: enter chars without commas (e.g. abc) 
++ compare every entered char with every char of the solution, there is no need to enter the chars in alphabetical order. e.g. abc is equal to cAb (case insensitive)  
+
+16.12. point system: 
++ right answer: 0,25pts
++ wrong checked answer: -0,25pts
++ non-checked: 0pts 
++ no negative points if wrong checked answer(s) < right checked answer(s)
+
+
 + main.cpp: start and test program from int main()
 + filereader class: read lines of quiz textfile and convert into 2d vector string
 + question class: seperate question, answer and solution possibilities => randomize positions 
 + player class: set/get name, score of a player
 
-the test program shows the same question with answers and right solutions in different, random positions
+the test program shows all questions with answers and right solutions in random positions
 
 usage with g++ compiler:
 ```
 $ g++ main.cpp controller.cpp player.cpp filereader.cpp question.cpp -std=c++11 -o main
 $ ./main
 99 is equal to:
-A: 11*9
-B: 3*30+3²
-C: 2*33
+A: 2*33
+B: 11*9
+C: 3*30+3²
+cB
 
 Solution:
-A
 B
+C
+
+2 answer(s) right, 0 answer(s) wrong
+Player1 gained 0.5pts for this question
+Player1's score: 0.5pts
 
 Which color component(s) contain(s) the RGB color space?
-A: green
-B: blue
-C: red
-D: gray
+A: blue
+B: red
+C: green
+D: grey
+bcA
 
 Solution:
 A
 B
 C
 
-What is the meaning of "++" or "--"?
-A: it adds/subtracts a variable by 2
-B: it adds/subtracts a variable by 1
-C: it's equal to x=x+2 or x=x-2
-D: it's equal to x=x+1 or x=x-1
-E: it is also known as increment or decrement operator
+3 answer(s) right, 0 answer(s) wrong
+Player1 gained 0.75pts for this question
+Player1's score: 1.25pts
+
+What is the meaning of "x++"/"x--"?
+A: it is also known as increment/decrement operator
+B: it adds/subtracts x by 2
+C: it's equal to x=x+2/x=x-2
+D: it adds/subtracts x by 1
+E: it's equal to x=x+1/x=x-1
+ADBE
 
 Solution:
-B
+A
 D
 E
 
+3 answer(s) right, 1 answer(s) wrong
+Player1 gained 0.5pts for this question
+Player1's score: 1.75pts
+
 What does the "%" operator in a programming language?
-A: it calculates the remainder of a division
-B: 1%100=1/100
-C: it is also known as the "modulo" operator
-D: 1%100=100
-E: it is supposed to use for percentage calculation
+A: it is supposed to use for percentage calculation
+B: 1%100=100
+C: it calculates the remainder of a division
+D: it is also known as the "modulo" operator
+E: 1%100=1/100
+ECD
 
 Solution:
-A
+B
 C
 D
+
+2 answer(s) right, 1 answer(s) wrong
+Player1 gained 0.25pts for this question
+Player1's score: 2pts
 
 
 ```
