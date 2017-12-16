@@ -19,8 +19,6 @@ Progress:
 + question class: seperate question, answer and solution possibilities => randomize positions 
 + player class: set/get name, score of a player
 
-the test program shows all questions with answers and right solutions in random positions
-
 usage with g++ compiler:
 ```
 $ g++ main.cpp controller.cpp player.cpp filereader.cpp question.cpp -std=c++11 -o main
