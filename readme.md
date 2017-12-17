@@ -3,6 +3,7 @@
 Progress:
 
 17.12. remove duplicates e.g. aaababcc => abc to prevent cheating
+
 16.12. answer checking:
 + multiple choice user input: enter chars without commas (e.g. abc) 
 + compare every entered char with every char of the solution, there is no need to enter the chars in alphabetical order. e.g. abc is equal to cAb (case insensitive)  
