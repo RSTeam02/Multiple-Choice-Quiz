@@ -20,7 +20,9 @@ using namespace std;
 class Controller{
 protected:
     fstream tFile;
-    int index;   
+    int index = 0;
+    double maxScore =0;
+    vector<double>maxPts;   
     Player p1;
     vector<string>lines;
     vector<Question> question;
@@ -32,6 +34,7 @@ public:
     void showAll();   
     string nextQuestion();
     void gameStart();
+    void countMaxScorePts();
     void checkAnswer(string input, string solution);
     vector<string> nextAnswer();
     vector<string> nextSolution();

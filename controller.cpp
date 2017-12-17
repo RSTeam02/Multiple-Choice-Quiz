@@ -6,6 +6,7 @@ Controller::Controller(){
     fstream textFile;    
     textFile.open("quizfile.txt", ios::in);
     lines = fr.fileToline(textFile);
+    maxPts.resize(lines.size());
     text2Arr = fr.lineTovect2d(lines);     
     question.resize(text2Arr.size()); 
 }
@@ -16,6 +17,7 @@ void Controller::start(){
         question[i].setQas(text2Arr[i]); 
     }    
     //showAll();
+    countMaxScorePts();
     gameStart();
 }
 
@@ -40,17 +42,20 @@ void Controller::gameStart(){
     char begin;
     char end = 'Z';
     string solution;
-    
+    cout<<"max. achievable score for all questions: "<<maxScore<<"\n\n";
     //all questions
     for(vector<int>::size_type h = 0; h < lines.size(); h++){
         setIndex(h);
         //show question with answers, solutions
         cout<<nextQuestion()<<"\n";
         begin = 'A';
-        for(int i = 0; i < nextAnswer().size(); i++){    
+        
+        for(int i = 0; i < nextAnswer().size(); i++){
+            
             cout<<begin<<": "<<nextAnswer()[i]<<"\n";
             begin++;
-        }        
+        }
+        cout<<"max. achievable pts: "<<maxPts[h]<<"\n";           
         cin>>input;
         
         begin = 'A'; 
@@ -101,9 +106,18 @@ void Controller::checkAnswer(string input, string solution){
         result = 0;
     }
     p1.setScore(result);
-    cout<<p1.getName()<<" gained "<<result<<"pts for this question\n"<<p1.getName()<<"'s score: "<<p1.getScore()<<"pts\n\n";
+    cout<<p1.getName()<<" achieved "<<result<<"pts for this question\n"<<p1.getName()<<"'s score: "<<p1.getScore()<<"pts\n\n";
 }
 
+void Controller::countMaxScorePts(){
+    for(vector<int>::size_type h = 0; h < lines.size(); h++){
+        setIndex(h);
+        for(int i = 0; i < nextAnswer().size(); i++){   
+            maxPts[h] += ("+" == nextSolution()[i]) ? .25 : 0;
+        }
+        maxScore += maxPts[h];
+    }   
+}
 
 void Controller::showAll(){
     char begin;
@@ -125,6 +139,7 @@ void Controller::showAll(){
             //"+" is right, "-" is wrong answer, see quizFile        
             if("+" == nextSolution()[i]){
                 cout<<begin<<"\n";
+                cout<<"test";
             }
             begin++;
         }

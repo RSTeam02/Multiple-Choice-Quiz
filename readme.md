@@ -2,6 +2,8 @@
 
 Progress:
 
+17.12. show achievable max. points each question and maximum achievable score of all questions
+
 17.12. remove duplicates e.g. aaababcc => abc to prevent cheating
 
 16.12. answer checking:
@@ -24,69 +26,75 @@ usage with g++ compiler:
 ```
 $ g++ main.cpp controller.cpp player.cpp filereader.cpp question.cpp -std=c++11 -o main
 $ ./main
+max. achievable score for all questions: 2.75
+
 99 is equal to:
 A: 2*33
-B: 11*9
-C: 3*30+3²
-cB
+B: 3*30+3²
+C: 11*9
+max. achievable pts: 0.5
+ca
 
 Solution:
 B
 C
 
-2 answer(s) right, 0 answer(s) wrong
-Player1 gained 0.5pts for this question
-Player1's score: 0.5pts
+1 answer(s) right, 1 answer(s) wrong
+Player1 achieved 0pts for this question
+Player1's score: 0pts
 
 Which color component(s) contain(s) the RGB color space?
-A: blue
-B: red
-C: green
-D: grey
-bcA
+A: grey
+B: green
+C: blue
+D: red
+max. achievable pts: 0.75
+cdb
+
+Solution:
+B
+C
+D
+
+3 answer(s) right, 0 answer(s) wrong
+Player1 achieved 0.75pts for this question
+Player1's score: 0.75pts
+
+What is the meaning of "x++"/"x--"?
+A: it's equal to x=x+1/x=x-1
+B: it is also known as increment/decrement operator
+C: it's equal to x=x+2/x=x-2
+D: it adds/subtracts x by 2
+E: it adds/subtracts x by 1
+max. achievable pts: 0.75
+eba
 
 Solution:
 A
 B
-C
+E
 
 3 answer(s) right, 0 answer(s) wrong
-Player1 gained 0.75pts for this question
-Player1's score: 1.25pts
+Player1 achieved 0.75pts for this question
+Player1's score: 1.5pts
 
-What is the meaning of "x++"/"x--"?
-A: it is also known as increment/decrement operator
-B: it adds/subtracts x by 2
-C: it's equal to x=x+2/x=x-2
-D: it adds/subtracts x by 1
-E: it's equal to x=x+1/x=x-1
-ADBE
+What does the "%" operator in a programming language?
+A: 1%100=1/100
+B: it calculates the remainder of a division
+C: it is supposed to use for percentage calculation
+D: it is also known as the "modulo" operator
+E: 1%100=100
+max. achievable pts: 0.75
+deb
 
 Solution:
-A
+B
 D
 E
 
-3 answer(s) right, 1 answer(s) wrong
-Player1 gained 0.5pts for this question
-Player1's score: 1.75pts
-
-What does the "%" operator in a programming language?
-A: it is supposed to use for percentage calculation
-B: 1%100=100
-C: it calculates the remainder of a division
-D: it is also known as the "modulo" operator
-E: 1%100=1/100
-ECD
-
-Solution:
-B
-C
-D
-
-2 answer(s) right, 1 answer(s) wrong
-Player1 gained 0.25pts for this question
-Player1's score: 2pts
+3 answer(s) right, 0 answer(s) wrong
+Player1 achieved 0.75pts for this question
+Player1's score: 2.25pts
 
 
 ```
