@@ -70,7 +70,17 @@ void Controller::gameStart(){
 }
 
 void Controller::checkAnswer(string input, string solution){
-    string upper;   
+    string upper ="";
+    double result =0;   
+    //remove duplicates e.g. aaababcc => abc
+    for(int i = 0; i < input.size()-1; i++){
+        for(int j = i+1; j < input.size(); j++){
+            if(input[i] == input[j]){               
+                input.erase(i,1);
+                j--;                
+            }
+        }
+    }
     for(char &c : input){
         upper += toupper(c);
     }
@@ -85,7 +95,7 @@ void Controller::checkAnswer(string input, string solution){
     }
     wrong = input.length() - right;
     cout<<right<<" answer(s) right, "<<wrong<<" answer(s) wrong\n";
-    double result = .25 * right - .25 * wrong;
+    result = .25 * right - .25 * wrong;
     if(result < 0){
         result = 0;
     }

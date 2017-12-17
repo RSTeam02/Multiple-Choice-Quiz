@@ -12,8 +12,8 @@ using namespace std;
 
 class Player{
 protected:
-    string playerName;
-    double playerScore;
+    string playerName = "";
+    double playerScore = 0;
 public:    
     void setName(string name);
     void setScore(double score);
