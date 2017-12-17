@@ -21,6 +21,7 @@ class Controller{
 protected:
     fstream tFile;
     int index = 0;
+    const double pts = .25;
     double maxScore =0;
     vector<double>maxPts;   
     Player p1;

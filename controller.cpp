@@ -101,7 +101,7 @@ void Controller::checkAnswer(string input, string solution){
     }
     wrong = input.length() - right;
     cout<<right<<" answer(s) right, "<<wrong<<" answer(s) wrong\n";
-    result = .25 * right - .25 * wrong;
+    result = pts * right - pts * wrong;
     if(result < 0){
         result = 0;
     }
@@ -113,7 +113,7 @@ void Controller::countMaxScorePts(){
     for(vector<int>::size_type h = 0; h < lines.size(); h++){
         setIndex(h);
         for(int i = 0; i < nextAnswer().size(); i++){   
-            maxPts[h] += ("+" == nextSolution()[i]) ? .25 : 0;
+            maxPts[h] += ("+" == nextSolution()[i]) ? pts : 0;
         }
         maxScore += maxPts[h];
     }   
