@@ -77,6 +77,7 @@ void Controller::checkAnswer(string input, string solution){
         for(int j = i+1; j < input.size(); j++){
             if(input[i] == input[j]){               
                 input.erase(i,1);
+                i--;
                 j--;                
             }
         }
