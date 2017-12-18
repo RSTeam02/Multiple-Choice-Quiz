@@ -8,6 +8,7 @@
 #include "question.h"
 #include "filereader.h"
 #include "player.h"
+#include "shuffle.h"
 using namespace std;
 
 /**
@@ -17,7 +18,7 @@ using namespace std;
 *
 */
 
-class Controller{
+class Controller : public Shuffle{
 protected:
     fstream tFile;
     int index = 0;

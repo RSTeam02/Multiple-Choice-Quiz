@@ -22,30 +22,16 @@ void Question::answerSize(){
     }
     numOfAnswer = newsize;
 }
-
-//set answer, solution possibilities in random position
-void Question::randomPos(){
-    srand(time(0));    
-    vector<int>numVector(numOfAnswer);
-
-    for(int i = 0; i < numOfAnswer; i++){
-        numVector[i] = i;
-    } 
-    for(int i = (numOfAnswer -1); i >= 0; i--){
-        int j = (rand()%(i+1));
-        int tmp = numVector[i];
-        numVector[i] = numVector[j];
-        numVector[j] = tmp;
-    }
-    answerPos = numVector;
+void Question::setShuffle(bool s){
+    shuffle = s;
 }
-
 vector<string>Question::getAnswer(){    
     answerSize();
-    randomPos();
+    shuffleAnswer = randomPos(numOfAnswer, shuffle);
+  
     vector<string> answer(numOfAnswer);
     for(int i =0; i < numOfAnswer; i++){        
-        answer[i] = qas[answerPos[i]+1];        
+        answer[i] = qas[shuffleAnswer[i]+1];        
     }
     return answer;
 }
@@ -53,7 +39,7 @@ vector<string>Question::getAnswer(){
 vector<string>Question::getSolution(){
     vector<string> solution(numOfAnswer);  
     for(int i =0; i < numOfAnswer; i++){        
-        solution[i] = qas[(answerPos[i]+numOfAnswer)+1];              
+        solution[i] = qas[(shuffleAnswer[i]+numOfAnswer)+1];              
     }
 
     return solution;

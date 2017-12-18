@@ -17,6 +17,7 @@ protected:
 public:    
     void setName(string name);
     void setScore(double score);
+    void addScore(double score);
     string getName();
     double getScore();
 };

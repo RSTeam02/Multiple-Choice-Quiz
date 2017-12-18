@@ -4,6 +4,7 @@
 #include<vector>
 #include <ctime>
 #include<iostream>
+#include "shuffle.h"
 using namespace std;
 
 /**
@@ -14,18 +15,20 @@ using namespace std;
 *
 */
 
-class Question{
+class Question : public Shuffle{
 protected:
     //questionAnswerSolution = qas
     size_t numOfAnswer;
-    vector<int>answerPos;    
+    vector<int>shuffleAnswer;    
     vector<string>qas;
     string question;
+    bool shuffle = false;
 public:    
     void setQas(vector<string>& q); 
     void answerSize();
+    void setShuffle(bool s);
     string getQuestion();
-    void randomPos();
+    //void randomPos();
     vector<string>getAnswer();    
     vector<string>getSolution();
 };

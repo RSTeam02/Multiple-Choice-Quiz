@@ -5,8 +5,13 @@ void Player::setName(string name){
 }
 
 void Player::setScore(double score){
+    playerScore = score;
+}
+
+void Player::addScore(double score){
     playerScore += score;
 }
+
 
 double Player::getScore(){
     return playerScore;
