@@ -4,8 +4,7 @@ Controller::Controller(){
     Filereader fr;    
     fstream textFile;    
     textFile.open("quizfile.txt", ios::in);
-    lines = fr.fileToline(textFile);
-    maxPts.resize(lines.size());
+    lines = fr.fileToline(textFile);    
     text2Arr = fr.lineTovect2d(lines);     
     question.resize(text2Arr.size());
    
@@ -29,8 +28,10 @@ void Controller::start(){
         for(int i = 0; i < text2Arr.size(); i++){
             question[i].setQas(text2Arr[i]); 
         }
+        maxPts.clear();
+        maxPts.resize(lines.size());        
         countMaxScorePts();
-        p1.setScore(0);
+        p1.setScore(0);        
         cout<<"Enter your name: ";
         cin>>name;
         p1.setName(name);
@@ -145,6 +146,7 @@ void Controller::checkAnswer(string input, string solution){
 }
 
 void Controller::countMaxScorePts(){
+    maxScore = 0;
     for(vector<int>::size_type h = 0; h < lines.size(); h++){
         setIndex(h);
         for(int i = 0; i < nextAnswer().size(); i++){   

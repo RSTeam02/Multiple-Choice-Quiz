@@ -129,7 +129,7 @@ y
 Enter your name: Joe
 Shuffle questions order (y/n): n
 Shuffle answer possibilities order of all questions (y/n): y
-max. achievable score for all questions: 11.25
+max. achievable score for all questions: 3.75
 
 99 is equal to:
 A: 2*33
