@@ -26,7 +26,7 @@ Progress:
 
 usage with g++ compiler:
 ```
-$ g++ main.cpp controller.cpp player.cpp filereader.cpp question.cpp -std=c++11 -o main
+$ g++ main.cpp controller.cpp player.cpp filereader.cpp shuffle.cpp question.cpp -std=c++11 -o main
 $ ./main
 Enter your name: Jim
 Shuffle questions order (y/n): y
